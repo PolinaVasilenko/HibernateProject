@@ -1,3 +1,6 @@
+package com.hibernate;
+
+import com.hibernate.HibernateUtil;
 import org.hibernate.Session;
 
 public class Main {
