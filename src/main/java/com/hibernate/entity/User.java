@@ -14,22 +14,21 @@ import java.util.Objects;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserData {
+public class User {
 
     @Id
-    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Basic
-    @Column(name = "email", nullable = false, length = -1)
+    @Column(name = "email")
     private String email;
 
-    @Basic
-    @Column(name = "userpassword", nullable = false, length = -1)
-    private String userpassword;
-
-    @Basic
-    @Column(name = "username", nullable = false, length = -1)
+    @Column(name = "username")
     private String username;
+
+    @Column(name = "userpassword")
+    private String password;
+
+
 
 }
